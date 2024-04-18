@@ -1,0 +1,143 @@
+/* Global Rules */
+:root {
+    --cream: hsl(30, 38%, 92%);
+    --dark-cyan: hsl(158, 36%, 37%);
+    --dark-green: hsl(158, 35%, 15%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+    --border-radius: 10px;
+    --gap-size: 15px;
+    --font-size: 14px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    color: var(--dark-grayish-blue);
+    font-size: var(--font-size);
+    font-weight: 500;
+}
+
+/* ---------------------------------------- */
+
+body {
+    background-color: var(--cream);
+    font-family: "Montserrat", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+}
+
+main {
+    width: 41vw;
+    min-width: 540px;
+}
+
+section {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    display: flex;
+}
+
+@media (max-width:767px) {
+    main {
+        width: 90vw;
+        min-width: 250px;
+        max-width: 500px;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    img.mobile {
+        display: block;
+        width: 100%;
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
+    }
+
+    img.desktop {
+        display: none;
+    }
+
+}
+
+@media (min-width:768px) {
+    img.mobile {
+        display: none;
+    }
+
+    img.desktop {
+        height: 50vh;
+        border-radius: var(--border-radius) 0 0 var(--border-radius);
+    }
+}
+
+.text-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.text-content p.perfume {
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+
+.text-content h1 {
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: 2em;
+    margin: var(--gap-size) 0;
+}
+
+.text-content h1+p {
+    line-height: 1.6;
+}
+
+.price-content {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-size);
+    margin: 25px 0;
+}
+
+.price-content p:first-of-type {
+    font-size: 32px;
+    color: var(--dark-cyan);
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+}
+
+.price-content p:last-of-type {
+    text-decoration: line-through;
+}
+
+.text-content button {
+    background-color: var(--dark-cyan);
+    border-radius: var(--border-radius);
+    border: none;
+    padding: var(--gap-size);
+    font-size: var(--font-size);
+    font-weight: 700;
+    color: var(--white);
+    width: 100%;
+    transition: 0.3s;
+}
+
+.text-content button i {
+    padding-right: var(--gap-size);
+}
+
+.text-content button:hover {
+    background-color: var(--dark-green);
+    cursor: pointer;
+}

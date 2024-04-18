@@ -82,7 +82,6 @@ section {
     img.desktop {
         height: 100%;
         border-radius: var(--border-radius) 0 0 var(--border-radius);
-        visibility: none;
     }
 }
 
@@ -96,6 +95,7 @@ section {
 .text-content p.perfume {
     text-transform: uppercase;
     letter-spacing: 8px;
+    font-size: 14px;
 }
 
 .text-content h1 {

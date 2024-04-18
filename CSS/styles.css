@@ -32,18 +32,21 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 1em;
 }
 
 main {
     width: 41vw;
     min-width: 540px;
+
 }
 
 section {
     background-color: var(--white);
     border-radius: var(--border-radius);
     display: flex;
+    height: 450px;
+
+
 }
 
 @media (max-width:767px) {
@@ -51,10 +54,12 @@ section {
         width: 90vw;
         min-width: 250px;
         max-width: 500px;
+
     }
 
     section {
         flex-direction: column;
+        height: max-content;
     }
 
     img.mobile {
@@ -75,8 +80,9 @@ section {
     }
 
     img.desktop {
-        height: 50vh;
+        height: 100%;
         border-radius: var(--border-radius) 0 0 var(--border-radius);
+        visibility: none;
     }
 }
 
